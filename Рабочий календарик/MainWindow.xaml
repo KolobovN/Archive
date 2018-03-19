@@ -1,0 +1,9 @@
+﻿<Window x:Class="SphereCraft.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="500" Width="500">
+    <Grid>
+        <Frame x:Name="mainframe" Content="Frame" Margin="0" HorizontalContentAlignment="Center"
+               VerticalContentAlignment="Center" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Window>

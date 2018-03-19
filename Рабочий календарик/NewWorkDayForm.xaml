@@ -1,0 +1,31 @@
+﻿<Page x:Class="SphereCraft.NewWorkDayForm"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      mc:Ignorable="d" 
+      d:DesignHeight="500" d:DesignWidth="500" Background="#BBBBBB"
+	Title="NewWorkDayForm">
+
+    <Grid>
+        <StackPanel Margin="0, 75, 0, 0">
+            <Label x:Name="wTitle" Style="{StaticResource InfoTextLabel}" HorizontalAlignment="Center" FontFamily="Arial" FontSize="20"> Новая смена </Label>
+            <TextBlock x:Name="wDateBlock" Style="{StaticResource InfoTextBlock}" FontSize="18" FontFamily="Arial" HorizontalAlignment="Center"></TextBlock>
+            <TextBox x:Name="wPSnameBox" ToolTip="Название ПС" Style="{DynamicResource wTextBox}" GotFocus="PSNameFieldGotFocus" LostFocus="PSNameFieldLostFocus" PreviewTextInput="TextBoxPreview" Text="Название ПС" />
+            <TextBox x:Name="wPSaddressBox" ToolTip="Адрес ПС" Style="{DynamicResource wTextBox}" GotFocus="PSAddrFieldGotFocus" LostFocus="PSAddrFieldLostFocus" PreviewTextInput="TextBoxPreview" Text="Адрес ПC" />
+            <TextBox x:Name ="wPSworkTimeBox" ToolTip="График работы ПС" Style="{DynamicResource wTextBox}" GotFocus="PSWorkTimeFieldGotFocus" LostFocus="PSWorkTimeLostFocus" PreviewTextInput="TextBoxWorkTimePreview" Text="Время работы ПС" />
+            <TextBox x:Name="wCostBox" ToolTip="Стоимость проезда туда-обратно" Style="{DynamicResource wTextBox}" GotFocus="PSCostFieldGotFocus" LostFocus="PSCostFieldLostFocus" PreviewTextInput="TextBoxCostPreview" Text="Стоимость проезда туда-обратно"/>
+            <CheckBox x:Name="wIsSubUrbFlag" Style="{DynamicResource wCheckBox}" Margin="0, 5, 0, 0" ToolTip="ГСМ" ></CheckBox>
+            <Separator />
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="NewWorkDayButton" Grid.Column="0" Style="{DynamicResource wButton}" Click="NewWorkDay_Click" Visibility="Collapsed">Сохранить</Button>
+                <Button x:Name="UpdWorkDayButton" Grid.Column="0" Style="{DynamicResource wButton}" Click="UpdWorkDay_Click" Visibility="Collapsed">Сохранить</Button>
+                <Button x:Name="ReturnButton" Grid.Column="1" Style="{DynamicResource wButton}" Click="ReturnButton_Click">Отмена</Button>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Page>
